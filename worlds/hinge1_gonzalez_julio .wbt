@@ -1,0 +1,48 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.6045751613323804 0.7684712836655265 0.20962051541150234 0.8176215968040905
+  position 0.7152254247936156 0.9063660166225174 1.161362700652332
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Floor {
+}
+Solid {
+  translation 0 0.25 0
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0.20392156862745098 0.396078431372549 0.6431372549019608
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.5
+        radius 0.05
+      }
+    }
+    HingeJoint {
+      jointParameters HingeJointParameters {
+      }
+      endPoint Solid {
+        translation 0 0.255 0
+        children [
+          Shape {
+            appearance PBRAppearance {
+              baseColor 0.8 0 0
+              roughness 1
+              metalness 0
+            }
+            geometry Box {
+              size 0.8 0.01 0.1
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
